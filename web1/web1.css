@@ -1,6 +1,7 @@
 h1 {
   margin: 0;
   padding: 0;
+  /* h1の初期値をリセット */
   font-size: x-large;
   margin: 10px 0;
   padding-top: 20px;
@@ -27,11 +28,13 @@ body {
   height: 100px;
   margin-top: 40px;
 }*/
+/* 線作る */
 .border {
   background-color: black;
   height: 1px;
   width: 100%;
 }
+
 .container3 {
   width: 319px;
   height: 70px;
@@ -41,14 +44,17 @@ body {
 }
 .box1 a {
   display: block; /*インライン要素をブロックにする*/
-  margin: 0px auto; /**中央寄せ*/
+  margin: 0px auto; 
+  /**中央寄せ*/
   width: 100%;
   background: rgb(250, 159, 149);
   padding: 14px 0;
   font-weight: bold;
-  text-align: center;
+  text-align: center; 
+  /*ボックスの中の文字が中央に*/
   color: white;
-  text-decoration: none;
+  text-decoration: none; 
+   /*ボックスの中の文字の下線をけす */
   border-radius: 10px;
   /*
   border: solid 3px rgb(250, 159, 149);
