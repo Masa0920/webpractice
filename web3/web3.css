@@ -1,0 +1,52 @@
+body {
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+h1 {
+   margin: 0;
+   padding: 0;
+   font-size: large;
+}
+ul {
+   list-style: none;
+}
+aside {
+   flex-basis: 300px;
+}
+main {
+   display: flex;
+   flex-grow: 1;
+}
+.box1 {
+   /* border: 1px solid grey; */
+   flex-grow: 1;
+}
+.box {
+   display: flex;
+}
+.boxk1 {
+   width: 100px;
+   text-align: center;
+   background-color: rgb(216, 215, 215);
+}
+.boxk2 {
+   width: 100px;
+   text-align: center;
+   background-color: grey;
+}
+th {
+   padding: 10px 15px;
+   border-bottom:1px solid grey;
+}
+td {
+   padding: 10px 15px;
+   border-bottom:1px solid grey;
+}
+tfoot {
+   text-align: right;
+}
+
+.box2 {
+   flex-basis: 310px;
+}
