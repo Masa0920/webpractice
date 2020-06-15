@@ -13,64 +13,70 @@
       <div></div>
       <nav>
          <ul>
-            <li>Home</li>
-            <li>GROUP</li>
-            <li>G-SUITE</li>
-            <li>HELP</li>
+            <li class="Home">Home</li>
+            <li class="GROUP">GROUP</li>
+            <li class="G-SUITE">G-SUITE</li>
+            <li class="HELP">HELP</li>
          </ul>
+         <p class="Logout">Logout</p>
       </nav>
-      <div>Logout</div>
    </aside>
-
    <main>
-      <div class="box1">
-         <h1>その他大学からのお知らせ</h1>
-         <div class="box">
-            <p class="boxk1">すべて</p>
-            <p class="boxk2">その他</p>
+      <!-- 上にある白のバー作りたいけどflex内だから横並びになっちゃう -->
+      <!-- <div class="navbar">あ</div> -->
+      <div class="container">
+         <!-- <div class="navbar">あ</div> -->
+         <div class="box1">
+            <div class="container1">
+               <h1>その他大学からのお知らせ</h1>
+               <div class="box">
+                  <p class="boxk1">すべて</p>
+                  <p class="boxk2">その他</p>
+               </div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>日付</th>
+                        <th>タイトル</th>
+                        <th>発信元</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>2020/06/12</td>
+                        <td>[付属図書館]リモートアクセスのサービスのログインID等について</td>
+                        <td>付属図書館</td>
+                     </tr>
+                     <tr>
+                        <td>2020/06/04</td>
+                        <td>令和２年度第１学期　国際交流科目の履修取消について</td>
+                        <td>学務部国際交流課</td>
+                     </tr>
+                     <tr>
+                        <td>2020/06/04</td>
+                        <td>令和２年度第１学期　国際交流科目の開講状況及び授業日程について</td>
+                        <td>学務部国際交流課</td>
+                     </tr>
+                     <tr>
+                        <td>2020/05/21</td>
+                        <td>タイトル4</td>
+                        <td>安全衛生室</td>
+                     </tr>
+                  </tbody>
+                  <tfoot>
+                     <tr>
+                        <!-- セルの連結 -->
+                        <td colspan="3">一覧へ</td>
+                     </tr>
+                  </tfoot>
+               </table>
+            </div>
          </div>
-         <table>
-            <thead>
-               <tr>
-                  <th>日付</th>
-                  <th>タイトル</th>
-                  <th>発信元</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>2020/06/12</td>
-                  <td>タイトル１</td>
-                  <td>付属図書館</td>
-               </tr>
-               <tr>
-                  <td>2020/06/04</td>
-                  <td>タイトル2</td>
-                  <td>学務部国際交流課</td>
-               </tr>
-               <tr>
-                  <td>2020/06/04</td>
-                  <td>タイトル3</td>
-                  <td>学務部国際交流課</td>
-               </tr>
-               <tr>
-                  <td>2020/05/21</td>
-                  <td>タイトル4</td>
-                  <td>安全衛生室</td>
-               </tr>
-            </tbody>
-            <tfoot>
-               <tr>
-                  <!-- セルの連結 -->
-                  <td colspan="3">一覧へ</td>
-               </tr>
-            </tfoot>
-         </table>
       </div>
-
       <div class="box2">
-         <h1>注目コンテンツ</h1>
-         <ul>
+         <!-- <div class="navbar">あ</div> -->
+         <h1 class="注目">注目コンテンツ</h1>
+         <ul　class="box2box">
             <li>Web履修システム</li>
             <li>安否確認システム</li>
             <li>大学提供ソフトウェア利用申請</li>
@@ -78,6 +84,7 @@
             <li>ELMS申合せ</li>
          </ul>
       </div>
+
    </main>
 
 </body>

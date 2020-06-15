@@ -2,6 +2,8 @@ body {
    margin: 0;
    padding: 0;
    display: flex;
+   height: 770px;
+   position: relative;
 }
 h1 {
    margin: 0;
@@ -9,21 +11,95 @@ h1 {
    font-size: large;
 }
 ul {
+   padding: 0;
+   margin: 0;
    list-style: none;
 }
+
+
+/* 一番左の */
 aside {
-   flex-basis: 300px;
+   height: 100%;
+   width: 300px;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   /* flex-basis: 300px; */
+   margin: 0 10px 0 0;
+   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+   position: fixed;
 }
+aside ul li {
+   font-weight: bold;
+   font-size: large;
+   height: 35px;
+   /* padding: 15px 0 0 20px; */
+   padding: 10px 20px;
+   /* 上下は真ん中で左寄せのやり方 */
+   text-align: center;
+   text-align: left;
+}
+.Home {
+   color: white;
+   background-color: green;
+}
+.GROUP {
+   color: grey;
+   background-color: yellow;
+}
+.G-SUITE {
+   color: white;
+   background-color: skyblue;
+}
+.HELP {
+   color: white;
+   background-color: grey;
+}
+.Logout {
+   height: 35px;
+   margin: 20px 10px;
+   padding: 5px;
+   border-radius: 10px;
+   /* 上下の中心にならない */
+   text-align: center;
+   color: snow;
+   background-color: black;
+}
+
 main {
+   height: 1000px;
    display: flex;
    flex-grow: 1;
+   /* background-color: pink; */
+   position: absolute;
+   right: 50px;
 }
+
+.nabver {
+   background-color: skyblue;
+}
+
+
+/* 真ん中の */
 .box1 {
-   /* border: 1px solid grey; */
    flex-grow: 1;
+   /* background-color: plum; */
+}
+.container1 {
+   width: 700px; 
+   margin: 10px;
+   /* background-color: powderblue; */
+   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+.container1 h1 {
+   height: 40px;
+   padding: 10px 0 0 10px;
+   color: white;
+   background-color: grey;
 }
 .box {
    display: flex;
+   margin: 0 50px;
+   font-size: medium;
 }
 .boxk1 {
    width: 100px;
@@ -35,11 +111,20 @@ main {
    text-align: center;
    background-color: grey;
 }
+/* テーブルの交互の背景色のやり方なぞ */
+/* 線のひき方も */
+table {
+   margin: 0 auto;
+   padding: 20px;
+   font-size: small;
+   text-align: left;
+}
 th {
    padding: 10px 15px;
    border-bottom:1px solid grey;
 }
 td {
+   max-width: 300px;
    padding: 10px 15px;
    border-bottom:1px solid grey;
 }
@@ -47,6 +132,24 @@ tfoot {
    text-align: right;
 }
 
+
+/* ここから一番右の */
 .box2 {
    flex-basis: 310px;
+   /* border: 1px solid black; */
+   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+   margin: 10px 0;
+}
+.注目{
+   color: snow;
+   background-color: skyblue;
+   height: 40px;
+   padding: 10px 0 0 10px;
+   /* ここも上下はセンターで左よせにしたかった */
+}
+/* 注目コンテンツの中変えたいけどできない */
+ul.box2box {
+   /* 上のulで指定したのにどっとドットが消えない */
+   list-style: none;
+   height: 30px;
 }
