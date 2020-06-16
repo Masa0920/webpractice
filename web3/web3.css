@@ -20,23 +20,33 @@ ul {
 /* 一番左の */
 aside {
    height: 100%;
-   width: 300px;
-   overflow-x: hidden;
-   overflow-y: scroll;
+   width: 30%;
+   /*overflow-x: hidden;*/
+   /*overflow-y: scroll;*/
    /* flex-basis: 300px; */
-   margin: 0 10px 0 0;
-   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-   position: fixed;
+   /*margin: 0 10px 0 0;*/
+   box-shadow: 0 10px 25px rgba(100, 100, 100, 0.5);
+   background-color:blue;
 }
-aside ul li {
+.rightContainer{
+   width:70%;
+}
+.sidebar{
+   position: fixed;
+   background-color:pink;
+   width:30%;
+}
+.sidebar ul li {
    font-weight: bold;
    font-size: large;
    height: 35px;
+   width:100%;
    /* padding: 15px 0 0 20px; */
-   padding: 10px 20px;
+   /*padding: 10px 20px;*/
    /* 上下は真ん中で左寄せのやり方 */
-   text-align: center;
-   text-align: left;
+   /* text-align: center;
+   text-align: left; */
+   line-height: 35px;
 }
 .Home {
    color: white;
@@ -60,35 +70,44 @@ aside ul li {
    padding: 5px;
    border-radius: 10px;
    /* 上下の中心にならない */
+   line-height:35px;
    text-align: center;
    color: snow;
    background-color: black;
 }
 
 main {
-   height: 1000px;
+   /* height: 1000px; */
    display: flex;
    flex-grow: 1;
    /* background-color: pink; */
-   position: absolute;
+   /*position: absolute;*/
    right: 50px;
+   margin-top: 45px;
 }
 
-.nabver {
+.navbar {
    background-color: skyblue;
+   height:40px;
+   width:100%;
+   position: fixed;
 }
 
 
 /* 真ん中の */
 .box1 {
-   flex-grow: 1;
-   /* background-color: plum; */
+   /*flex-grow: 1;*/
+   /*background-color: plum;*/
 }
+
+.container {
+   flex-grow: 1;
+}
+
 .container1 {
-   width: 700px; 
    margin: 10px;
    /* background-color: powderblue; */
-   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+   box-shadow: 0 10px 25px rgba(100, 100, 100, 0.5);
 }
 .container1 h1 {
    height: 40px;
@@ -118,16 +137,18 @@ table {
    padding: 20px;
    font-size: small;
    text-align: left;
+   border-collapse: collapse;
 }
 th {
    padding: 10px 15px;
-   border-bottom:1px solid grey;
+   border-bottom:1px solid rgb(221, 220, 220);
 }
 td {
    max-width: 300px;
    padding: 10px 15px;
-   border-bottom:1px solid grey;
+   border-bottom:1px solid:rgb(221, 220, 220);
 }
+tr:nth-child(even){background-color:rgb(221, 220, 220) }
 tfoot {
    text-align: right;
 }
@@ -135,21 +156,43 @@ tfoot {
 
 /* ここから一番右の */
 .box2 {
-   flex-basis: 310px;
-   /* border: 1px solid black; */
-   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+   width: 300px;
+   /* flex-basis: 310px;
+   border: 1px solid black; */ 
    margin: 10px 0;
+   
 }
 .注目{
    color: snow;
    background-color: skyblue;
    height: 40px;
    padding: 10px 0 0 10px;
+   
    /* ここも上下はセンターで左よせにしたかった */
 }
 /* 注目コンテンツの中変えたいけどできない */
-ul.box2box {
+.box2box {
    /* 上のulで指定したのにどっとドットが消えない */
    list-style: none;
-   height: 30px;
+   background-color:white;
+   box-shadow: 0 10px 25px rgba(100, 100, 100, 0.5);
+}
+@media (max-width: 768px)
+{
+   main {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      /* background-color: pink; */
+      /*position: absolute;*/
+      margin-top: 45px;
+   }
+   .container {
+      width:100%;
+   }
+   .box2 {
+      width:100%;
+      padding: 10px;
+      background-color:green;
+   }
 }
