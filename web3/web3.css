@@ -21,8 +21,8 @@ ul {
 aside {
    height: 100%;
    width: 30%;
-   /*overflow-x: hidden;*/
-   /*overflow-y: scroll;*/
+   overflow-x: hidden;
+   overflow-y: scroll;
    /* flex-basis: 300px; */
    /*margin: 0 10px 0 0;*/
    box-shadow: 0 10px 25px rgba(100, 100, 100, 0.5);
@@ -41,11 +41,6 @@ aside {
    font-size: large;
    height: 35px;
    width:100%;
-   /* padding: 15px 0 0 20px; */
-   /*padding: 10px 20px;*/
-   /* 上下は真ん中で左寄せのやり方 */
-   /* text-align: center;
-   text-align: left; */
    line-height: 35px;
 }
 .Home {
@@ -130,8 +125,6 @@ main {
    text-align: center;
    background-color: grey;
 }
-/* テーブルの交互の背景色のやり方なぞ */
-/* 線のひき方も */
 table {
    margin: 0 auto;
    padding: 20px;
