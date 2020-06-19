@@ -50,10 +50,16 @@ p {
    padding: 10px 0;
    text-align: center;
    border-right: solid 1px  rgb(156,227,225);
-   border-radius: 6px;
+   border-radius: 0px;
+}
+.BOX1 {
+   border-radius: 6px 0 0 6px;
+}
+.BOX2 {
+   border-radius: 0 6px 6px 0;
 }
 /* ？　ボタンの変化指定できない */
-.button:hover {
+.box:hover {
    background-image: linear-gradient(to bottom, rgb(108,198,196),  rgb(156,227,225));
 }
 .box a {
@@ -120,6 +126,7 @@ main {
    background: pink;
    width: 640px;
    height: 280px;
+   object-fit:cover;
 }
 
 .box2 {
@@ -166,7 +173,19 @@ td {
 .bottom li {
    margin: 10px;
    text-decoration: none;
-   list-style: circle;
+   list-style: none;
+   display:flex;
+   align-items:center;
+}
+
+.bottom li:before{
+   content:'';
+   display:inline-block;
+   width:8px;
+   height:8px;
+   border:4px solid white;
+   border-radius:50%;
+   margin-right:4px;
 }
 .bottom a {
    text-decoration: none;
@@ -177,7 +196,6 @@ td {
 /*水色帯より下 */
 footer {
    max-width: 920px;
-   display: flex;
    margin: 0 auto 10px auto;
 }
 
@@ -187,8 +205,10 @@ footer .p1 {
    margin-left: auto;
 }
 
-footer .p2 {
+.p2 {
    font-size: small;
+   /* margin-left: auto; */
+   text-align:right;
 }
 
 /* 線作る */
@@ -200,7 +220,7 @@ footer .p2 {
 }
 /* 一番下の英語のとこ */
 .end {
-   font-size: small;
+   display:block;
    max-width: 920px;
    margin: 10px auto;
    text-align: center;
