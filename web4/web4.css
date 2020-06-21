@@ -8,7 +8,8 @@ p {
 .header {
    display: flex;
    margin: 10px auto;
-   width: 920px;
+   width: 100%;
+   max-width:920px;
 }
 .TITLE {
    margin: auto 0;
@@ -33,7 +34,7 @@ p {
    text-align: center;
    padding: 5px;
 }
-/* から水色帯*/
+/* ここから水色帯*/
 .container {
    max-width: 920px;
    margin: 0 auto;
@@ -46,7 +47,7 @@ p {
 }
 .box {
    text-shadow: 1px 1px 2px #6CC6C4;
-   width: 100%;
+   min-width: 182px;
    padding: 10px 0;
    text-align: center;
    border-right: solid 1px  rgb(156,227,225);
@@ -58,7 +59,7 @@ p {
 .BOX2 {
    border-radius: 0 6px 6px 0;
 }
-/* ？　ボタンの変化指定できない */
+/* ！　クラス名buttonじゃない */
 .box:hover {
    background-image: linear-gradient(to bottom, rgb(108,198,196),  rgb(156,227,225));
 }
@@ -72,13 +73,63 @@ p {
 /* main開始 */
 main {
    max-width: 920px;
+   width: 100%;
    margin: 0 auto;
    display: flex;
 }
- /* 左側 */
+
+ /* 右側 */
+.mainright{
+   max-width: 650px;
+   width: 100%;
+   margin: 10px 0 10px 20px;
+}
+.image {
+   /* ？ width内に謎の余白 */
+   /* ？　左の表とimgの間のmarginを固定したい（ちいさくしてっても）０にならないように */
+   margin-left: auto;
+   padding-left: auto;
+   /* background: pink; */
+   max-width: 640px;
+   width: 100%;
+   max-height: 280px;
+   object-fit:cover;
+} 
+/* ココから表 */
+.box2 {
+   max-width: 640px;
+   width: 100%;
+   margin: 10px 0 0 auto;
+}
+.title2 {
+   padding: 10px 0 0 auto;
+   padding: 5px;
+   border-bottom: solid 2px #6CC6C4;
+}
+table {
+   /* display: flex; */
+   width: 96%;
+   margin: 10px;
+   font-size: small;
+   text-align: left;
+   border-collapse: collapse;
+   word-wrap: nomal;
+}
+.tate1 {
+   width: 100px;
+   font-weight: bolder;
+}
+td {
+   padding: 10px 10px 10px 0;
+   border-bottom: dashed 1px grey;
+}
+/* 左側 */
 .box1 {
+   /* ？狭めたとき改行してほしいのにされない */
+   /* flex-wrap: wrap; */
    margin: 10px 0;
    width: 250px;
+   max-width: 250px;
    border: solid 1px #6CC6C4;
    border-radius: 10px 10px 0 0;
    color: white;
@@ -116,46 +167,8 @@ main {
    transform: rotate(45deg);
    vertical-align: 2px;
 }
- /* 右側 */
-.mainright{
-   width: 650px;
-   margin: 10px 0 10px auto;
-}
-.image {
-   margin-left: auto;
-   background: pink;
-   width: 640px;
-   height: 280px;
-   object-fit:cover;
-}
 
-.box2 {
-   width: 640px;
-   margin: 10px 0 0 auto;
-}
-.title2 {
-   padding: 10px 0 0 auto;
-   padding: 5px;
-   border-bottom: solid 2px #6CC6C4;
-}
-table {
-   width: 96%;
-   margin: 10px;
-   font-size: small;
-   text-align: left;
-   border-collapse: collapse;
-}
-.tate1 {
-   width: 100px;
-   font-weight: bolder;
-}
-td {
-   padding: 10px 10px 10px 0;
-   border-bottom: dashed 1px grey;
-}
-
-
-/* から下の水色帯 */
+/* ここから下の水色帯 */
 .bottom{
    max-width: 920px;
    margin: 0 auto;
@@ -226,17 +239,108 @@ footer .p1 {
    text-align: center;
 }
 
+/* ここからレスポンシブデザイン */
 @media (max-width: 768px) {
-   header {
-      display: block;
+   .header{
+      flex-direction:column;
+      margin: 10px auto;
+   }
+   .header img {
+      margin: 0 auto;
+      text-align: center;
    }
    .TITLE {
-      max-width: 100%;
+      /* max-width: 100%; */
       /* height: auto; */
-      height: 45px;
+      /*height: 45px;*/
+      object-fit:contain;
       margin: 0 auto;
    }
    .header_right {
+      text-align: center;
+      margin: 0 auto;
+      /* background-color: violet; */
+   }
+   .p1 {
+      text-align: center;
+   }
+   .p2 {
+      font-size: x-large;
+      text-align: center;
+   }
+   /* ここから水色帯 */
+   .navi {
+      margin: 0;
+      padding: 0;
+   }
+   .container {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 70px 70px 70px;
+   }
+   /* ここからメイン */
+   main {
+      flex-direction: column;
+      padding: 0 auto;
+      /* text-align: center; */
+   }
+   aside {
+      order: 2;
+   }
+   .mainright {
+      order: 1;
+      margin: 10px auto;
+   }
+   /* 写真調整 */
+   .img {
+      max-width: 100%;
       margin: 0 auto;
    }
+   /* ここからtable 調整 */
+   .title2 {
+      font-size: x-large;
+   }
+   td {
+      display: block;
+      width: 100%;
+      padding: 20px 20px 20px 0;
+      font-size: large;
+   }
+   .tate1 {
+      width: 100%;
+      border-bottom: white;
+   }
+   /* 左にあったボックス */
+   .box1 {
+      font-size: large;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+   }
+   .box1 ul {
+      margin-bottom: 20px;
+   }
+   .title1 {
+      padding: 15px;
+   }
+   .box1 li {
+      font-size: large;
+      padding: 10px 0;
+   }
+   /* ここから下の水色帯 */
+   .bottom {
+      border-radius: 5px;
+      word-wrap: normal;
+   }
+   .bottom ul {
+      word-wrap: normal;
+   }
+   /* ここから下の水色帯の下 */
+   /* ？　たて並びにしたいとこ */
+   footer.p2 {
+      display: block;
+   }
+
 }
