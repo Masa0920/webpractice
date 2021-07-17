@@ -15,19 +15,11 @@ body {
 .container {
   background-color: white;
   width: 360px;
-  /*height: 320px;*/
   height: auto;
-  /*margin-left: auto;
-  margin-right: auto;*/
   margin: 0px auto;
   border-radius: 20px;
   padding: 20px;
 }
-/*.container2 {
-  width: 400px;
-  height: 100px;
-  margin-top: 40px;
-}*/
 /* 線作る */
 .border {
   background-color: black;
@@ -43,22 +35,16 @@ body {
   border-top: 1px solid rgb(209, 209, 209);
 }
 .box1 a {
-  display: block; /*インライン要素をブロックにする*/
+  display: block;
   margin: 0px auto; 
-  /**中央寄せ*/
   width: 100%;
   background: rgb(250, 159, 149);
   padding: 14px 0;
   font-weight: bold;
   text-align: center; 
-  /*ボックスの中の文字が中央に*/
   color: white;
   text-decoration: none; 
-   /*ボックスの中の文字の下線をけす */
   border-radius: 10px;
-  /*
-  border: solid 3px rgb(250, 159, 149);
-  */
 }
 /*.box1 p {
   width: 144px;
